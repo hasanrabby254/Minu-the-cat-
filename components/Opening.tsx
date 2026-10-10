@@ -18,7 +18,6 @@ export default function Opening({ config, onComplete, onLightCandle }: OpeningPr
   const [showTextStage1, setShowTextStage1] = useState(false);
   const [showTextStage2, setShowTextStage2] = useState(false);
   const [showContinueBtn, setShowContinueBtn] = useState(false);
-  const [starWhisperVisible, setStarWhisperVisible] = useState(false);
 
   const handleLightCandle = () => {
     if (isLit) return;
@@ -49,10 +48,6 @@ export default function Opening({ config, onComplete, onLightCandle }: OpeningPr
   const handleTapStar = () => {
     audioManager.playStarTwinkleSound();
     audioManager.haptic([20, 30, 20]);
-    setStarWhisperVisible(true);
-    setTimeout(() => {
-      setStarWhisperVisible(false);
-    }, 5000);
   };
 
   return (
@@ -86,23 +81,6 @@ export default function Opening({ config, onComplete, onLightCandle }: OpeningPr
                 মিনুর তারা (স্পর্শ করো)
               </span>
             </button>
-
-            {/* Star Whisper Card */}
-            <AnimatePresence>
-              {starWhisperVisible && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -5, scale: 0.9 }}
-                  transition={{ duration: 0.4 }}
-                  className="mt-2 px-4 py-2.5 rounded-2xl bg-[#0b1026]/90 border border-[#f4c56a]/40 backdrop-blur-md shadow-xl text-center max-w-xs"
-                >
-                  <p className="text-xs sm:text-sm font-serif-bengali text-[#fff4e0] leading-relaxed">
-                    &ldquo;নওরিন, আমি মেঘের ওপার থেকে তোমার দিকেই তাকিয়ে আছি... একটুও একা ভেবো না নিজেকে।&rdquo;
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </motion.div>
         )}
       </div>
