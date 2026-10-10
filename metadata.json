@@ -1,0 +1,7 @@
+{
+  "name": "মিনুর স্মৃতি – Minu's Memorial",
+  "description": "নওরিনের প্রিয় বিড়াল মিনুর স্মৃতিতে একটি গভীর ভালোবাসার মোবাইল মেমোরিয়াল ওয়েবসাইট।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

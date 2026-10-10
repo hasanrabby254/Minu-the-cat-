@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-hind: var(--font-hind), 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif-bengali: var(--font-serif-bengali), 'Noto Serif Bengali', Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-hind);
+    background-color: #04060c;
+    color: #fff4e0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: pan-y;
+  }
+}
+
+.font-serif-bengali {
+  font-family: var(--font-serif-bengali);
+}
+
+/* Subtle cinematic vignette overlay */
+.cinematic-vignette {
+  background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+}
+
+/* Hide scrollbar while preserving native smooth touch scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
