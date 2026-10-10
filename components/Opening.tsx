@@ -212,7 +212,7 @@ export default function Opening({ config, onComplete, onLightCandle }: OpeningPr
 
         {/* Revealed Memorial Words (Sequential Flow) */}
         <div className="w-full mt-4 flex flex-col items-center text-center min-h-[140px]">
-          {/* Stage 1: Minu's Name & Dates */}
+          {/* Stage 1: Minu's Name */}
           <AnimatePresence>
             {showTextStage1 && (
               <motion.div
@@ -224,9 +224,6 @@ export default function Opening({ config, onComplete, onLightCandle }: OpeningPr
                 <h1 className="text-4xl sm:text-5xl font-serif-bengali font-semibold text-[#fff4e0] tracking-wide drop-shadow-[0_2px_12px_rgba(244,197,106,0.3)]">
                   {config.catName}
                 </h1>
-                <p className="mt-2 text-xs sm:text-sm text-[#f4c56a]/85 font-light tracking-wider">
-                  {config.birthDate} — {config.passingDate}
-                </p>
               </motion.div>
             )}
           </AnimatePresence>
