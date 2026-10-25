@@ -25,7 +25,12 @@ export default function MessageVideo({
   isMuted = false,
   onToggleAudio,
 }: MessageVideoProps) {
-  const embedUrl = messageConfig.streamableEmbedUrl || 'https://streamable.com/e/w04166';
+  const rawUrl = messageConfig.streamableEmbedUrl || 'https://streamable.com/e/yv4ey5';
+  const embedUrl = rawUrl.includes('autoplay')
+    ? rawUrl
+    : rawUrl.includes('?')
+    ? `${rawUrl}&autoplay=1&loop=1`
+    : `${rawUrl}?autoplay=1&loop=1`;
 
   return (
     <section
@@ -82,7 +87,7 @@ export default function MessageVideo({
         />
       </motion.div>
 
-      {/* 🐾 Minu's Memorial Video - Seamless & Borderless */}
+      {/* 🐾 Minu's Memorial Video - Seamless, Borderless, Auto-looping */}
       <div className="relative z-10 max-w-[390px] w-full mx-auto mt-8 flex flex-col items-center">
         {/* Video Player Display: Streamable embed, blended without borders */}
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black/60 shadow-2xl shadow-black">
@@ -90,7 +95,7 @@ export default function MessageVideo({
             src={embedUrl}
             title="মিনুর ভিডিও - Streamable"
             className="w-full h-full border-0 rounded-2xl"
-            allow="autoplay; fullscreen"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
             allowFullScreen
           />
         </div>

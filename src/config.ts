@@ -169,8 +169,8 @@ export const memorialConfig: MemorialConfig = {
   message: {
     transitionLine: "মিনু তোমাকে কিছু বলতে চায়...",
     videoPath: "/assets/final/minu-message.mp4",
-    streamableEmbedUrl: "https://streamable.com/e/w04166",
-    streamableUrl: "https://streamable.com/w04166",
+    streamableEmbedUrl: "https://streamable.com/e/yv4ey5?autoplay=1&loop=1",
+    streamableUrl: "https://streamable.com/yv4ey5",
     posterPath: "/assets/final/minu-message-poster.jpg",
     youtubeId: "s69LyLoOtvc",
     youtubeUrl: "https://youtu.be/s69LyLoOtvc?si=Oo02gYXjyluFo1vM",
